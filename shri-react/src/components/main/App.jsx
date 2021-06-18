@@ -1,13 +1,16 @@
 import React from 'react';
 import { Link, Route } from 'react-router-dom';
+import { Footer, Header } from '../index';
 
 export const App = () => {
-  return <div>
-    <button>
-      <Link to="/dashboard">Dashboard</Link>
-    </button>
+  const title = "School CI server";
+
+  return (
     <div>
-      {/* <Route path="/dashboard" component={Dashboard} /> */}
+
+      <Route exact path="/" component={() => <Header title={title} settings={true} />} />
+      <Route exact path="/settings" component={() => <Header title={title} settings={false} />} />
+      <Footer />
     </div>
-  </div>
+  );
 }
