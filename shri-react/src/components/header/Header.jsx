@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { withRouter } from "react-router";
 
 const Head = (props) => {
-  const {title, settings, runBuild, rebuild, location : { repoName }} = props;
+  const {title, settings, runBuild, rebuild} = props;
 
   return (
     <div className="header">
