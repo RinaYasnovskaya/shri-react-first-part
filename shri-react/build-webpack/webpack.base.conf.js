@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 const PATHS = {
   src: path.join(__dirname, '../src'),
@@ -35,7 +35,7 @@ module.exports = {
           name: 'vendors',
           test: /node_modules/,
           chunks: 'all',
-          enforce: true
+          enforce: true,
         }
       }
     }
@@ -47,12 +47,6 @@ module.exports = {
       loader: 'babel-loader',
       exclude: '/node_modules/'
     },
-    // {
-    //   enforce: 'pre',
-    //   test: /\.(js|jsx)$/,
-    //   loader: 'eslint-loader',
-    //   exclude: '/node_modules/'
-    // },
     {
       test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'url-loader',
@@ -69,7 +63,7 @@ module.exports = {
     }, {
       test: /\.scss$/,
       use: [
-        'style-loader',
+        // 'style-loader',
         MiniCssExtractPlugin.loader,
         {
           loader: 'css-loader',
@@ -94,10 +88,13 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx'],
-},
+  },
 
   plugins: [
     new CleanWebpackPlugin(),
+    // new ESLintPlugin({
+    //   extensions: ['.js', '.jsx'],
+    // }),
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}css/[name].[fullhash].css`,
     }),

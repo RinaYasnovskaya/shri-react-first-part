@@ -1,5 +1,14 @@
 {
   "parser": "@babel/eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true,
+      "legacyDecorators": true
+    },
+    "sourceType": "module",
+    "allowImportExportEverywhere": false
+  },
   "env": {
       "browser": true,
       "node": true,
@@ -21,6 +30,5 @@
       "no-debugger": 0,
       "no-duplicate-imports": "off",
       "import/prefer-default-export": "off"
-  },
-  "eslint.validate": [ "javascript", "javascriptreact", "html", "jsx" ]
+  }
 }

@@ -1,25 +1,26 @@
 import React from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { Footer, Header, StartPage, BuildList, BuildDetails } from '../index';
+import '../../assets/scss/main.scss';
 
 export const App = () => {
   const title = "School CI server";
 
   return (
-    <div>
+    <div id="main-block">
       <Route exact path="/" component={() => {
         return (
-          <div>
-            <Header settings={true} runBuild={true} />
-            {/* <StartPage /> */}
-            <BuildList />
+          <div className="header-content">
+            <Header settings={true} runBuild={false} />
+            <StartPage />
+            {/* <BuildList /> */}
           </div>
         )
       }} />
       <Route path="/build/:buildId" component={() => {
         return (
-          <div>
-            <Header title={title} settings={true} rebuild={true} />
+          <div className="header-content">
+            <Header settings={true} rebuild={true} />
             <BuildDetails />
           </div>
         )
