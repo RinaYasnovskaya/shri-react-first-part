@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Route } from 'react-router-dom';
-import { Footer, Header, StartPage } from '../index';
+import { Footer, Header, StartPage, BuildList, BuildDetails } from '../index';
 
 export const App = () => {
   const title = "School CI server";
@@ -10,8 +10,17 @@ export const App = () => {
       <Route exact path="/" component={() => {
         return (
           <div>
-            <Header title={title} settings={true} />
-            <StartPage />
+            <Header settings={true} runBuild={true} />
+            {/* <StartPage /> */}
+            <BuildList />
+          </div>
+        )
+      }} />
+      <Route path="/build/:buildId" component={() => {
+        return (
+          <div>
+            <Header title={title} settings={true} rebuild={true} />
+            <BuildDetails />
           </div>
         )
       }} />

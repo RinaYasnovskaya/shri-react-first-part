@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { withRouter } from "react-router";
 
-const StartPageMain = () => {
+export const StartPage = () => {
   return (
     <div>
       <div className="start-Page">
@@ -13,5 +12,3 @@ const StartPageMain = () => {
     </div>
   );
 };
-
-export const StartPage = withRouter(StartPageMain);

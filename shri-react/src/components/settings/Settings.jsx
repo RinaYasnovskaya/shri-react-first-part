@@ -1,10 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { withRouter } from "react-router";
 
-const SettingsMain = () => {
-
-
+export const Settings = () => {
   return (
     <form action="">
       <p className="form__title">
@@ -35,5 +31,3 @@ const SettingsMain = () => {
     </form>
   );
 };
-
-export const Settings = withRouter(SettingsMain);

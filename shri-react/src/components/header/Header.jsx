@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { buildSettings } from '../../js/test-backend';
 
 export const Header = ({title, settings, runBuild, rebuild}) => {
+  const { data: { repoName } } = buildSettings;
+
   return (
     <div className="header">
       <div className="header__title">
