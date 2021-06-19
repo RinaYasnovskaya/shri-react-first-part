@@ -1,10 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { withRouter } from "react-router";
 
-const Head = (props) => {
-  const {title, settings, runBuild, rebuild} = props;
-
+export const Header = ({title, settings, runBuild, rebuild}) => {
   return (
     <div className="header">
       <div className="header__title">
@@ -19,5 +16,3 @@ const Head = (props) => {
     </div>
   );
 };
-
-export const Header = withRouter(Head);
