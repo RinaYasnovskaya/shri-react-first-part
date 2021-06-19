@@ -1,0 +1,13 @@
+@import '../constants/vars';
+
+.button{
+  border-radius: $border-radius-elems;
+  padding: 0 20px;
+}
+
+button{
+  border: 0;
+  padding: 0;
+  pointer-events: auto;
+  cursor: pointer;
+}

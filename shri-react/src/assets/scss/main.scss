@@ -1,5 +1,5 @@
 @import '../../../node_modules/reset-css/sass/reset';
-@import '../scss/constants/vars';
+@import '../scss/base/buttons';
 
 html, body, #root{
   height: 100%;
@@ -15,4 +15,8 @@ html, body, #root{
 }
 .footer {
   flex: 0 0 auto;
+}
+
+a{
+  text-decoration: none;
 }
