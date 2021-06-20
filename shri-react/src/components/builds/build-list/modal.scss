@@ -74,3 +74,13 @@
     color: $color-text-secondary;
   }
 }
+
+@media (max-width: 500px) {
+  .modal{
+    padding: 0 16px;
+
+    &__inner{
+      width: auto;
+    }
+  }
+}

@@ -32,3 +32,15 @@
   background-color: $disabled-back;
   border-radius: $border-radius-cards;
 }
+
+@media (max-width: 670px) {
+  .build-details{
+    padding: 0;
+
+    .card{
+      margin: 0 16px 8px;
+      padding: 16px 12px;
+      width: auto;
+    }
+  }
+}
