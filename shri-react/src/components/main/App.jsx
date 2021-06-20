@@ -11,9 +11,9 @@ export const App = () => {
       <Route exact path="/" component={() => {
         return (
           <div className="header-content">
-            <Header settings={true} runBuild={false} />
-            <StartPage />
-            {/* <BuildList /> */}
+            <Header settings={true} runBuild={true} />
+            {/* <StartPage /> */}
+            <BuildList />
           </div>
         )
       }} />

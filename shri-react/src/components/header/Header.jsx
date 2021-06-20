@@ -14,12 +14,12 @@ export const Header = ({title, settings, runBuild, rebuild}) => {
               : <span className="header__title-repo">{repoName}</span>}
       </div>
       <div className="header__buttons">
+        { runBuild ? <button className="button button_light button__run">Run Build</button> : ''}
+        { rebuild ? <button className="button button_light button__rebuild">Rebuild</button> : ''}
         { settings ? <Link  to="/settings"
             className={
               `button button_light button__settings button__settings_${textClassSettings[0]}`
             }>{textClassSettings[1]}</Link> : ''}
-        { runBuild ? <button className="button button_light button__run">Run Build</button> : ''}
-        { rebuild ? <button className="button button_light button__rebuild">Rebuild</button> : ''}
       </div>
     </div>
   );

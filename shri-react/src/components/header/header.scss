@@ -25,6 +25,10 @@
       color: $color-text-primary;
     }
   }
+
+  &__buttons{
+    display: flex;
+  }
 }
 
 .button{
@@ -42,5 +46,30 @@
     &::before{
       background: url('../../assets/img/settings.svg');
     }
+  }
+
+  &__run{
+    width: 95px;
+
+    &::before{
+      background: url('../../assets/img/play.svg');
+      background-repeat: no-repeat;
+      margin: 9px 6px 9px 0;
+    }
+  }
+
+  &__rebuild{
+    width: 84px;
+
+    &::before{
+      background-repeat: no-repeat;
+      background: url('../../assets/img/rebuild.svg');
+      margin-left: 0;
+    }
+  }
+
+  &__run, &__rebuild{
+    padding-left: 10px;
+    margin-right: 8px;
   }
 }

@@ -1,0 +1,33 @@
+@import '../../../assets/scss/constants/colors';
+@import '../../../assets/scss/constants/vars';
+
+.build-details{
+  padding: 0 100px;
+
+  .card{
+    flex-direction: column;
+    height: auto;
+
+    &__right-part{
+      flex-direction: row;
+      width: auto;
+      border-top: 1px solid $color-separate;
+      margin-top: 8px;
+      padding-top: 8px;
+    }
+
+    &__date{
+      margin-bottom: 0;
+      padding-right: 9px;
+    }
+
+    &__date, &__time{
+      color: $color-text-primary;
+    }
+  }
+}
+
+.log{
+  background-color: $disabled-back;
+  border-radius: $border-radius-cards;
+}

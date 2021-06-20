@@ -22,10 +22,17 @@ const BuildCardStuct = ({ item }) => {
     <Link to={{pathname: `/build/buildId=${id}`, item: item}} className="card">
       <div className="card__left-part">
         <img src={`../../assets/img/${lowerStatus}.svg`} alt={status} className="card__status" />
-        <span className={`card__title card__title_${lowerStatus}`}>№{buildNumber}</span>
-        <span className="card__description">{commitMessage}</span>
-        <span className="card__branch">{branchName}</span><span className="card__hash">{shortCommitHash}</span>
-        <span className="card__author">{authorName}</span>
+        <div>
+          <div className="card__left-top">
+            <span className={`card__title card__title_${lowerStatus}`}>#{buildNumber}</span>
+            <span className="card__description">{commitMessage}</span>
+          </div>
+          <div className="card__left-bottom">
+            <span className="card__branch">{branchName}</span>
+            <span className="card__hash">{shortCommitHash}</span>
+            <span className="card__author">{authorName}</span>
+          </div>
+        </div>
       </div>
       <div className="card__right-part">
         <span className="card__date">{readyDate}</span>
