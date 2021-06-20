@@ -11,7 +11,7 @@
   &_bright{
     background-color: $button-enabled-bright;
     height: $height-main-elem;
-    line-height: 36px;
+    line-height: $height-main-elem;;
     color: $color-text-primary;
 
     &:hover{
@@ -19,6 +19,7 @@
     }
     &:focus{
       border: 2px solid $button-enabled-bright-border-focus;
+      outline: none;
     }
   }
 
@@ -36,6 +37,14 @@
       height: 12px;
       margin: 8px 5px 8px 8px;
       position: absolute;
+    }
+
+    &:hover{
+      background-color: $button-enabled-light-hover;
+    }
+    &:focus{
+      border: 2px solid $enabled-light-border-focus;
+      outline: none;
     }
   }
 }
