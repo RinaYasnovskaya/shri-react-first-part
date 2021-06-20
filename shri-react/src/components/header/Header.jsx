@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { buildSettings } from '../../js/test-backend';
-import { Modal } from '../builds/build-list/Modal';
+import { Modal } from '../index';
 import './header.scss';
 
 export const Header = ({title, settings, runBuild, rebuild}) => {

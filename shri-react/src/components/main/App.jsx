@@ -5,7 +5,7 @@ import '../../assets/scss/main.scss';
 
 export const App = () => {
   let title = "School CI server";
-  let buildExist = false;
+  let buildExist = true;
   let runBuild = false;
 
   if (buildExist) {
