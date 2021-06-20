@@ -1,5 +1,4 @@
 const path = require('path');
-const fs = require('fs');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -13,7 +12,6 @@ const PATHS = {
 }
 
 const PAGES_DIR = `${PATHS.src}/public/`;
-const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.html'));
 
 module.exports = {
 
@@ -63,7 +61,6 @@ module.exports = {
     }, {
       test: /\.scss$/,
       use: [
-        // 'style-loader',
         MiniCssExtractPlugin.loader,
         {
           loader: 'css-loader',
@@ -110,10 +107,5 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: `${PAGES_DIR}/index.html`,
     })
-
-    // ...PAGES.map(page => new HtmlWebpackPlugin({
-    //   template: `${PAGES_DIR}/${page}`,
-    //   filename: `./${page}`
-    // }))
   ],
 };
