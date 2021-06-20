@@ -4,16 +4,23 @@ import { Footer, Header, StartPage, BuildList, BuildDetails, Settings } from '..
 import '../../assets/scss/main.scss';
 
 export const App = () => {
-  const title = "School CI server";
+  let title = "School CI server";
+  let buildExist = false;
+  let runBuild = false;
+
+  if (buildExist) {
+    runBuild = true;
+  }
 
   return (
     <div id="main-block">
       <Route exact path="/" component={() => {
         return (
           <div className="header-content">
-            <Header settings={true} runBuild={true} />
-            {/* <StartPage /> */}
-            <BuildList />
+            <Header title={ buildExist ? null : title } settings={true} runBuild={runBuild} />
+            {
+              buildExist ? <BuildList /> : <StartPage />
+            }
           </div>
         )
       }} />
