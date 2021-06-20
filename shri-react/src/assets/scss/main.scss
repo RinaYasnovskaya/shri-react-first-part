@@ -1,5 +1,6 @@
 @import '../../../node_modules/reset-css/sass/reset';
-@import '../scss/base/buttons';
+@import './base/buttons';
+@import './base/fonts';
 
 *{
   box-sizing: border-box;
@@ -7,6 +8,13 @@
 
 html, body, #root{
   height: 100%;
+}
+
+body{
+  font-family: 'YS Text', 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-feature-settings: 'liga', 'kern';
+    -moz-font-feature-settings: 'liga', 'kern';
+    font-feature-settings: 'liga', 'kern';
 }
 
 #main-block {
@@ -26,6 +34,10 @@ a{
 }
 
 input{
+  font-family: 'YS Text', 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-feature-settings: 'liga', 'kern';
+    -moz-font-feature-settings: 'liga', 'kern';
+    font-feature-settings: 'liga', 'kern';
   border: none;
   font-style: normal;
   font-weight: 400;

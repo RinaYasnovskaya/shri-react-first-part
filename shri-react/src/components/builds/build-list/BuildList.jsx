@@ -1,5 +1,6 @@
 import React from 'react';
 import { BuildCard } from './BuildCard';
+import { Modal } from './Modal';
 import './buildList.scss';
 import './buildCard.scss';
 import { buildList } from '../../../js/test-backend';
