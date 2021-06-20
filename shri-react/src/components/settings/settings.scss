@@ -81,3 +81,27 @@
 .red-star{
   color: $red-star;
 }
+
+@media (max-width: 670px) {
+  .form{
+    margin: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .form {
+    width: 100%;
+    padding: 0 16px;
+
+    input:not([type="submit"]):not([type="button"]), input {
+      width: 100%;
+    }
+
+    input[type="submit"] {
+      margin-bottom: 12px;
+    }
+    input[type="button"] {
+      margin-left: 0;
+    }
+  }
+}
