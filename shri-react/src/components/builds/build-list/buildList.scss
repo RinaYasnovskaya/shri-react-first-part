@@ -1,3 +1,5 @@
+@import '../../../assets/scss/constants/vars';
+
 .build-list{
   padding: 0 100px;
 }
@@ -8,6 +10,13 @@
 
 @media (max-width: 670px) {
   .build-list{
-    padding: 0  6px;
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .button__show{
+    height: $height-main-elem;
+    width: 100%;
   }
 }

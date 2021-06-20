@@ -86,4 +86,15 @@
       line-height: 20px;
     }
   }
+
+  .button{
+    &__run, &__rebuild{
+      width: 28px;
+      overflow: hidden;
+    }
+
+    &__run::before, &__rebuild::before{
+      position: relative;
+    }
+  }
 }
