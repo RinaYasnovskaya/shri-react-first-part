@@ -34,6 +34,7 @@
 .button{
   &__settings{
     line-height: 28px;
+    padding-left: 10px;
 
     &_long{
       width: 87px;
@@ -45,6 +46,7 @@
 
     &::before{
       background: url('../../assets/img/settings.svg');
+      margin: 8px 5px 8px 0;
     }
   }
 

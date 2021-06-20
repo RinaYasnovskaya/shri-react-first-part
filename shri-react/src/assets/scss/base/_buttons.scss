@@ -7,12 +7,12 @@
   font-size: $font-size-secondary;
   font-style: normal;
   font-weight: 400;
+  color: $color-text-primary;
 
   &_bright{
     background-color: $button-enabled-bright;
     height: $height-main-elem;
-    line-height: $height-main-elem;;
-    color: $color-text-primary;
+    line-height: $height-main-elem;
 
     &:hover{
       background-color: $button-enabled-bright-hover;
