@@ -1,0 +1,13 @@
+.build-list{
+  padding: 0 100px;
+}
+
+.button__show{
+  width: 92px;
+}
+
+@media (max-width: 670px) {
+  .build-list{
+    padding: 0  6px;
+  }
+}
