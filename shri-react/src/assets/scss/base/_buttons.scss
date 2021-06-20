@@ -1,8 +1,43 @@
 @import '../constants/vars';
+@import '../constants/colors';
 
 .button{
   border-radius: $border-radius-elems;
-  // padding: 0 20px;
+  display: block;
+  font-size: $font-size-secondary;
+  font-style: normal;
+  font-weight: 400;
+
+  &_bright{
+    background-color: $button-enabled-bright;
+    height: $height-main-elem;
+    line-height: 36px;
+    color: $color-text-primary;
+
+    &:hover{
+      background-color: $button-enabled-bright-hover;
+    }
+    &:focus{
+      border: 2px solid $button-enabled-bright-border-focus;
+    }
+  }
+
+  &_light{
+    background-color: $button-enabled-light;
+    height: $height-other-buttons;
+    text-align: center;
+
+    &::before{
+      content: '';
+      background-size: 12px 12px;
+      background-repeat: no-repeat;
+      display: block;
+      width: 12px;
+      height: 12px;
+      margin: 8px 5px 8px 8px;
+      position: absolute;
+    }
+  }
 }
 
 button{

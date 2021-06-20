@@ -16,10 +16,10 @@ export const Header = ({title, settings, runBuild, rebuild}) => {
       <div className="header__buttons">
         { settings ? <Link  to="/settings"
             className={
-              `button button__light button__settings button__settings_${textClassSettings[0]}`
+              `button button_light button__settings button__settings_${textClassSettings[0]}`
             }>{textClassSettings[1]}</Link> : ''}
-        { runBuild ? <button className="button button__light button__run">Run Build</button> : ''}
-        { rebuild ? <button className="button button__light button__rebuild">Rebuild</button> : ''}
+        { runBuild ? <button className="button button_light button__run">Run Build</button> : ''}
+        { rebuild ? <button className="button button_light button__rebuild">Rebuild</button> : ''}
       </div>
     </div>
   );
