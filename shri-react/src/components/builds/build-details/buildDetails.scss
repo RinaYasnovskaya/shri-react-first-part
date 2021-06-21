@@ -31,6 +31,29 @@
 .log{
   background-color: $disabled-back;
   border-radius: $border-radius-cards;
+  margin-bottom: 20px;
+
+  pre{
+    font-family: monospace;
+    font-size: 11px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 850px) {
+  .build-details{
+    padding: 0;
+
+    .card{
+      margin: 0 100px 8px;
+      width: auto;
+    }
+  }
+  .log{
+    pre{
+      overflow:scroll;
+    }
+  }
 }
 
 @media (max-width: 670px) {
